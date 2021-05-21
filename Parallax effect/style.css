@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    margin: auto;
+}
+div.image{
+    width: 100%;
+    height: 500px;
+    background-image: url(img1.jpg);
+    background-attachment: fixed;
+    background-position: 0px -150px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+div.imagetxt{
+    font-size: 70px;
+    position: relative;
+    top: 0px;
+    color: white;
+    mix-blend-mode: difference;
+}

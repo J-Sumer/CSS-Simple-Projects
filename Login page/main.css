@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.login-svg{
+    width: 40%;
+    float: left;
+    margin-top: 25vh;
+    margin-left: 5vw;
+    padding-left: 10%;
+}
+.login-img-svg{
+    width: 100%;
+}
+.login-form{
+    margin-top: 10%;
+    text-align: center;
+    float: left;
+    width: 50%;
+}
+.avatar-img{
+    width: 12%;
+}
+h2{
+    margin: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input{
+    padding: 6px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+i{
+    color: #b3b3b3;
+    position: relative;
+    top: 3px;
+}
+i.active{
+    color: #16e669;
+}
+.user-tab , .password-tab{
+    margin: 40px auto;
+    position: relative;
+    width: 35%;
+    padding: 0 20px;
+}
+.user-span , .password-span{
+    top: 6px;
+    left: 25%;
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    z-index: -1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.5s;
+}
+.user-main-tab , .password-main-tab{
+    position: relative;
+}
+.user-tab:before , .password-tab:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 25px;
+    border-radius: 2px;
+    background-color: grey;
+    top: 35px;
+}
+.user-tab:after , .password-tab:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    left: 25px;
+    border-radius: 2px;
+    background-color: #16e669;
+    top: 35px;
+    transition: 0.5s;
+    transform-origin: center;
+}
+.user-tab.active:after{
+    transform: scaleX(1);
+}
+.password-tab.active:after{
+    transform: scaleX(1);
+}
+.user-span.active{
+    top: -19px;
+    left: 20%;
+    font-size: 12px;
+}
+.password-span.active{
+    top: -19px;
+    left: 20%;
+    font-size: 12px;
+}
+input[type="submit"]{
+    position: relative;
+    left: 4%;
+    background-color: black;
+    width: 19%;
+    border-radius: 20px;
+    color: white;
+}

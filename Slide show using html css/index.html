@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide show</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="slidershow middle">
+        <div class="arrows left"><i class="fa fa-chevron-left"></i></div>
+        <div class="arrows right"><i class="fa fa-chevron-right"></i></div>
+        <div class="slides">
+            <div class="slide s1">
+                <img class="img1" src="1.jpg" alt="">
+            </div>
+            <div class="slide s2">
+                <img class = "img2" src="2.jpg" alt="">
+            </div>
+            <!-- <div class="slide">
+                <img src="3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="5.jpg" alt="">
+            </div> -->
+        </div>
+    </div>
+    <script>
+        const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
+        const leftArrow = document.querySelector('.left');
+        const rightArrow = document.querySelector('.right');
+        const slides = document.querySelector('.slides');
+        const slide1 = document.querySelector('.slide.s1');
+        const slide2 = document.querySelector('.slide.s2');
+        const img1 = document.querySelector('.img1');
+        const img2 = document.querySelector('.img2');
+        let position = 0;
+
+        rightArrow.addEventListener('click' , ()=>{
+            
+            img1.setAttribute('src' , images[position]);
+            position += 1;
+            img2.setAttribute('src' , images[position]);
+            slides.style.left = 0 ;
+            slides.style.transition = 1 + 's';
+            slides.style.left = '-' + 100 + '%' ;
+            setTimeout(()=>{
+                slides.style.transition = 0 + 's';
+            },1000)
+        })
+
+
+        // leftArrow.addEventListener('click' , ()=>{
+        //     if(position == 1){
+        //         slides.style.left = '-' + 400 + '%' ;
+        //         position = 5;
+        //     }else if(position == 2){
+        //         slides.style.left = 0;
+        //         position = 1;
+        //     }else if(position == 3){
+        //         slides.style.left = '-' + 100 + '%' ;
+        //         position = 2;
+        //     }else if(position == 4){
+        //         slides.style.left = '-' + 200 + '%' ;
+        //         position = 3;
+        //     }else if(position == 5){
+        //         slides.style.left = '-' + 300 + '%' ;
+        //         position = 4;
+        //     }
+        // })
+        // rightArrow.addEventListener('click' , ()=>{
+            
+
+        //     if(position == 1){
+        //         slides.style.left = '-' + 100 + '%' ;
+        //         position = 2;
+        //     }else if(position == 2){
+        //         slides.style.left = '-' + 200 + '%' ;
+        //         position = 3;
+        //     }else if(position == 3){
+        //         slides.style.left = '-' + 300 + '%' ;
+        //         position = 4;
+        //     }else if(position == 4){
+        //         slides.style.left = '-' + 400 + '%' ;
+        //         position = 5;
+        //     }else if(position == 5){
+        //         slides.style.left = 0 ;
+        //         position = 1;
+        //     }
+        // })
+
+    </script>
+</body>
+</html>

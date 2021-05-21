@@ -1,0 +1,88 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2014/08/01/00/08/pier-407252_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    position: relative;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px rgb(0,0,0,0.2);
+
+}
+.logo{
+    color: #069370;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    float: left;
+}
+nav{
+    float : right;
+}
+.clearfix{
+    clear:both;
+}
+nav ul{
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    list-style-type: none;
+}
+nav ul li a{
+    display: block;
+    margin: 10px 2px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+nav ul li a.active,nav ul li a:hover{
+    background-color: #069370;
+    color: #ffff;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+@media (max-width: 1000px){
+    .menu-toggle{
+        width: 40px;
+        height: 40px;
+        float: right;
+        margin: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .menu-toggle:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+        font-size: 150%;
+    }
+    nav{
+        float: none;
+        clear:both;
+    }
+    nav ul{
+        display: block;
+        transition: .5s;
+        max-height: 0;
+        overflow: hidden;
+    }
+    nav ul li a{
+        display: block;
+    }
+}
+
+
+
+
+
